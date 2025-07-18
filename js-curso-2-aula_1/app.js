@@ -47,6 +47,7 @@ function gerarNumero() {
   let quantidadeDeElementos = listaDeNumerosSorteados.length;
   if(quantidadeDeElementos == dificuldade) {
     listaDeNumerosSorteados = [];
+    dificuldade = dificuldade + 50;
   }
   if(listaDeNumerosSorteados.includes(numeroEscolhido)) {
     return gerarNumero();
