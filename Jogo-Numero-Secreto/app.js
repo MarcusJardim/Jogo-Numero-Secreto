@@ -1,5 +1,5 @@
 let listaDeNumerosSorteados = []
-let dificuldade = 100;
+let dificuldade = 50;
 let tentativas = 1;
 let numeroSecreto = gerarNumero();
 let titulo = document.querySelector('h1');
