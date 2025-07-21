@@ -1,5 +1,5 @@
 let listaDeNumerosSorteados = []
-let dificuldade = 50;
+let dificuldade = 30;
 let tentativas = 1;
 let numeroSecreto = gerarNumero();
 let titulo = document.querySelector('h1');
@@ -47,6 +47,7 @@ function gerarNumero() {
   let quantidadeDeElementos = listaDeNumerosSorteados.length;
   if(quantidadeDeElementos == dificuldade) {
     listaDeNumerosSorteados = [];
+    dificuldade++;
   }
   if(listaDeNumerosSorteados.includes(numeroEscolhido)) {
     return gerarNumero();
