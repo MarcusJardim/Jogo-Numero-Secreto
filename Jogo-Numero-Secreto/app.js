@@ -11,7 +11,7 @@ function exibirTexto(tag, texto) {
    if ('speechSynthesis' in window) {
         let utterance = new SpeechSynthesisUtterance(texto);
         utterance.lang = 'pt-BR'; 
-        utterance.rate = 1.2; 
+        utterance.rate = 2.0; 
         window.speechSynthesis.speak(utterance); 
     } else {
         console.log("Web Speech API não suportada neste navegador.");
@@ -32,10 +32,10 @@ function verificarChute() {
     document.getElementById('reiniciar').removeAttribute('disabled');
   } else {
     if(chute > numeroSecreto) {
-      exibirTexto('h1', 'Você errou :(');
+      exibirTexto('h1', 'Você errou');
       exibirTexto('p', `O número secreto é menor que ${chute}`);
     } else {
-        exibirTexto('h1', 'Você errou :(');
+        exibirTexto('h1', 'Você errou');
         exibirTexto('p', `O número secreto é maior que ${chute}`);
     }
     tentativas ++;
